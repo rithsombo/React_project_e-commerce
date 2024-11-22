@@ -9,10 +9,13 @@ const Navbar = () => {
   const { getTotalCartItem } = useContext(ShopContext);
   return (
     <div className="navbar">
-      <div className="nav-logo">
-        <img src={logo} alt="" />
-        <p>Lemonade</p>
-      </div>
+      <Link to="/" style={{ textDecoration: "none" }}>
+        <div className="nav-logo">
+          <img src={logo} alt="" />
+          <p>Lemonade</p>
+        </div>
+      </Link>
+
       <ul className="nav-menu">
         <li onClick={() => setMenu("shop")}>
           <Link style={{ textDecoration: "none" }} to="/">
